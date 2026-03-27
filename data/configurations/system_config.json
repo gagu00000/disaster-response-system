@@ -1,0 +1,55 @@
+{
+    "system": {
+        "name": "Multi-Agent Disaster Response System",
+        "version": "1.0.0",
+        "description": "AI-Powered Resource Allocation with AHP, Fuzzy Logic & LLM Explainability"
+    },
+    "simulation": {
+        "default_scenario": "earthquake",
+        "resource_replenishment_rate": 0.08,
+        "severity_decay_per_step": 0.1,
+        "accessibility_recovery_per_step": 0.05,
+        "demand_regeneration_per_step": 0.5
+    },
+    "ahp": {
+        "consistency_ratio_threshold": 0.10,
+        "power_method_iterations": 100,
+        "convergence_tolerance": 1e-8
+    },
+    "fuzzy": {
+        "input_range": [0, 10],
+        "output_range": [0, 100],
+        "defuzzification_method": "centroid"
+    },
+    "negotiation": {
+        "concession_rate": 0.3,
+        "disagreement_threshold": 0.3,
+        "max_rounds": 5
+    },
+    "allocation": {
+        "min_share_per_zone": 0.03,
+        "max_share_per_zone": 0.45,
+        "absorption_multiplier": 2.0
+    },
+    "fairness": {
+        "gini_threshold": 0.30,
+        "min_coverage_threshold": 0.40,
+        "redistribution_rate": 0.30
+    },
+    "llm": {
+        "default_model": "mistral",
+        "fallback_models": ["llama3.2", "phi3"],
+        "temperature": 0.1,
+        "max_tokens_explanation": 500,
+        "max_tokens_query": 200,
+        "max_tokens_insight": 800,
+        "timeout_seconds": 30
+    },
+    "performance_targets": {
+        "response_coverage": 0.70,
+        "gini_coefficient": 0.30,
+        "resilience_index": 0.60,
+        "resource_utilization": 0.90,
+        "final_avg_severity": 3.0
+    }
+}
