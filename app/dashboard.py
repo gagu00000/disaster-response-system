@@ -483,6 +483,7 @@ def main():
     init_session_state()
     st.markdown(get_css(), unsafe_allow_html=True)
     render_stats_bar()
+    render_footer()
     render_sidebar()
     t1, t2, t3, t4, t5, t6 = st.tabs(["🌐 Global Overview", "👥 Agents", "⚙ Decision Engine", "📦 Allocation", "📈 Analytics", "🤖 AI Insights"])
     with t1: render_tab_overview()
@@ -491,7 +492,6 @@ def main():
     with t4: render_tab_allocation()
     with t5: render_tab_analytics()
     with t6: render_tab_ai()
-    render_footer()
 
 
 if __name__ == "__main__":

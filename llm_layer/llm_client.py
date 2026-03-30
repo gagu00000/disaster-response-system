@@ -37,8 +37,17 @@ class LLMClient:
             return False
 
         try:
-            models = ollama.list()
-            available = [m.get("name", "").split(":")[0] for m in models.get("models", [])]
+            result = ollama.list()
+            # Handle both old dict-style and new typed-object responses
+            if hasattr(result, 'models'):
+                models_list = result.models
+                available = []
+                for m in models_list:
+                    name = getattr(m, 'model', '') or getattr(m, 'name', '') or ''
+                    available.append(name.split(":")[0])
+            else:
+                models_list = result.get("models", [])
+                available = [m.get("name", "").split(":")[0] for m in models_list]
 
             if self.model in available or any(self.model in m for m in available):
                 self.is_connected = True
@@ -90,7 +99,12 @@ class LLMClient:
                     "num_predict": max_tokens,
                 }
             )
-            return response.get("message", {}).get("content", "")
+            # Handle both dict and typed ChatResponse
+            if hasattr(response, 'message'):
+                msg = response.message
+                return getattr(msg, 'content', '') or ''
+            else:
+                return response.get("message", {}).get("content", "")
         except Exception as e:
             raise ConnectionError(f"LLM generation failed: {str(e)}")
 
