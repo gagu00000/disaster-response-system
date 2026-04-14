@@ -111,7 +111,7 @@ class NegotiationEngine:
                     proposals[agent_type],
                     other_proposals,
                     contested_zones,
-                    concession_rate=0.3
+                    concession_rate=agent.concession_rate  # Agent-specific concession strategy
                 )
                 counter_proposals[agent_type] = counter
         else:

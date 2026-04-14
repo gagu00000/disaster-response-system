@@ -188,8 +188,8 @@ class FuzzyModule:
 
             self.simulation.compute()
             result = self.simulation.output['priority']
-            # Reset for next computation
-            self.simulation = ctrl.ControlSystemSimulation(self.ctrl_system)
+            # Reset for next computation (reuse control system, avoid rebuilding)
+            self.simulation.reset()
             return round(result, 2)
         except Exception:
             return self._fallback_priority(severity, population_density, accessibility, resource_availability)
@@ -252,7 +252,8 @@ class FuzzyModule:
 
             # Fairness score: based on vulnerability and unmet demand
             unmet = min(10, zone.get("unmet_demand", 5) / 5.0)
-            fairness_score = self.compute_priority(unmet, pop_density * vulnerability * 2, 5.0, resource_avail)
+            vuln_pop = min(10.0, pop_density * vulnerability * 2)  # Clamp to 0-10 input range
+            fairness_score = self.compute_priority(unmet, vuln_pop, 5.0, resource_avail)
 
             # Cost score: inverse — lower accessibility = higher cost, so higher priority
             cost_score = self.compute_priority(severity, pop_density, 10 - accessibility, resource_avail)

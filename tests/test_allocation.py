@@ -17,7 +17,10 @@ def test_allocation_budget_constraint():
     zones = [{
         "name": z["name"], "current_severity": z["severity"],
         "population": z["population"], "population_at_risk": z["population"],
-        "accessibility": z["accessibility"], "unmet_demand": z.get("initial_demand", 20),
+        "accessibility": z["accessibility"],
+        "resource_availability": z.get("resource_availability", 3.0),
+        "vulnerability": z.get("vulnerability", 0.5),
+        "unmet_demand": z.get("initial_demand", 20),
         "cumulative_resources_received": 0, "resilience_index": 0.5
     } for z in scenario["zones"]]
 
@@ -34,7 +37,10 @@ def test_allocation_non_negative():
     zones = [{
         "name": z["name"], "current_severity": z["severity"],
         "population": z["population"], "population_at_risk": z["population"],
-        "accessibility": z["accessibility"], "unmet_demand": z.get("initial_demand", 20),
+        "accessibility": z["accessibility"],
+        "resource_availability": z.get("resource_availability", 3.0),
+        "vulnerability": z.get("vulnerability", 0.5),
+        "unmet_demand": z.get("initial_demand", 20),
         "cumulative_resources_received": 0, "resilience_index": 0.5
     } for z in scenario["zones"]]
 
@@ -54,7 +60,7 @@ def test_fairness_gini():
         {"name": "C", "population": 20000, "current_severity": 3, "unmet_demand": 10},
     ]
     alloc = {"A": 50, "B": 30, "C": 20}
-    fairness = fm.assess(zones, alloc)
+    fairness = fm.check_fairness(alloc, zones)
     gini = fairness["gini_coefficient"]
     assert 0 <= gini <= 1, f"Gini should be 0-1, got {gini}"
     print(f"  ✅ test_fairness_gini PASSED (gini={gini:.3f})")

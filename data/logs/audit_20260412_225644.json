@@ -1,0 +1,529 @@
+[
+  {
+    "timestamp": "2026-04-12T22:56:46.987070",
+    "session_id": "20260412_225644",
+    "type": "allocation",
+    "data": {
+      "step": 0,
+      "allocation": {
+        "Accident Site": 40.06,
+        "Adjacent Residential": 30.84,
+        "Downwind Exposure": 18.84,
+        "Hospital District": 10.26
+      },
+      "metrics": {
+        "response_coverage": 0.6901,
+        "gini_coefficient": 0.2535,
+        "total_cost": 370.56,
+        "avg_resilience": 0.5416,
+        "avg_severity": 5.4175,
+        "resource_utilization": 1.0,
+        "min_coverage_ratio": 0.628,
+        "total_allocated": 100.0,
+        "total_available": 100,
+        "step": 0,
+        "phase": "Immediate Response"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Downwind Exposure",
+          "Hospital District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.1698,
+          "Government Agency": 0.1622,
+          "NGO": 0.104,
+          "AI Coordinator": 0.0116
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T22:56:47.416423",
+    "session_id": "20260412_225644",
+    "type": "allocation",
+    "data": {
+      "step": 1,
+      "allocation": {
+        "Accident Site": 1.0,
+        "Adjacent Residential": 1.0,
+        "Downwind Exposure": 1.68,
+        "Hospital District": 0.94
+      },
+      "metrics": {
+        "response_coverage": 0.7301,
+        "gini_coefficient": 0.1201,
+        "total_cost": 12.16,
+        "avg_resilience": 0.5555,
+        "avg_severity": 5.26,
+        "resource_utilization": 0.0462,
+        "min_coverage_ratio": 0.684,
+        "total_allocated": 4.62,
+        "total_available": 100,
+        "step": 1,
+        "phase": "Immediate Response"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Accident Site",
+          "Downwind Exposure",
+          "Hospital District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2025,
+          "Government Agency": 0.169,
+          "NGO": 0.0875,
+          "AI Coordinator": 0.06
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T22:56:47.891512",
+    "session_id": "20260412_225644",
+    "type": "allocation",
+    "data": {
+      "step": 2,
+      "allocation": {
+        "Accident Site": 1.0,
+        "Adjacent Residential": 3.38,
+        "Downwind Exposure": 1.0,
+        "Hospital District": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.7786,
+        "gini_coefficient": 0.2798,
+        "total_cost": 17.24,
+        "avg_resilience": 0.5725,
+        "avg_severity": 5.205,
+        "resource_utilization": 0.0638,
+        "min_coverage_ratio": 0.7173,
+        "total_allocated": 6.38,
+        "total_available": 100,
+        "step": 2,
+        "phase": "Immediate Response"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Accident Site",
+          "Downwind Exposure",
+          "Hospital District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2028,
+          "Government Agency": 0.1642,
+          "NGO": 0.0826,
+          "AI Coordinator": 0.058
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T22:56:47.891518",
+    "session_id": "20260412_225644",
+    "type": "event",
+    "data": {
+      "step": 2,
+      "event": {
+        "time_step": 2,
+        "type": "evacuation_order",
+        "zone": "Adjacent Residential",
+        "description": "Evacuation order issued for adjacent residential",
+        "severity_change": 0.5,
+        "accessibility_change": -1.0
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T22:56:48.329394",
+    "session_id": "20260412_225644",
+    "type": "allocation",
+    "data": {
+      "step": 3,
+      "allocation": {
+        "Accident Site": 1.0,
+        "Adjacent Residential": 1.0,
+        "Downwind Exposure": 3.59,
+        "Hospital District": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.8355,
+        "gini_coefficient": 0.2948,
+        "total_cost": 16.67,
+        "avg_resilience": 0.5924,
+        "avg_severity": 5.5225,
+        "resource_utilization": 0.0659,
+        "min_coverage_ratio": 0.8049,
+        "total_allocated": 6.59,
+        "total_available": 100,
+        "step": 3,
+        "phase": "Immediate Response"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Adjacent Residential",
+          "Accident Site",
+          "Hospital District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2262,
+          "Government Agency": 0.1277,
+          "NGO": 0.1108,
+          "AI Coordinator": 0.0508
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T22:56:48.329399",
+    "session_id": "20260412_225644",
+    "type": "event",
+    "data": {
+      "step": 3,
+      "event": {
+        "time_step": 3,
+        "type": "plume_shift",
+        "zone": "Downwind Exposure",
+        "description": "Chemical plume shifts direction",
+        "severity_change": 2.0,
+        "accessibility_change": -1.5
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T22:56:48.750554",
+    "session_id": "20260412_225644",
+    "type": "allocation",
+    "data": {
+      "step": 4,
+      "allocation": {
+        "Accident Site": 1.0,
+        "Adjacent Residential": 1.0,
+        "Downwind Exposure": 3.87,
+        "Hospital District": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.8948,
+        "gini_coefficient": 0.3133,
+        "total_cost": 16.93,
+        "avg_resilience": 0.6132,
+        "avg_severity": 5.3375,
+        "resource_utilization": 0.0687,
+        "min_coverage_ratio": 0.8271,
+        "total_allocated": 6.87,
+        "total_available": 100,
+        "step": 4,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Adjacent Residential",
+          "Accident Site",
+          "Hospital District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2406,
+          "Government Agency": 0.1138,
+          "NGO": 0.0999,
+          "AI Coordinator": 0.0604
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T22:56:49.165405",
+    "session_id": "20260412_225644",
+    "type": "allocation",
+    "data": {
+      "step": 5,
+      "allocation": {
+        "Accident Site": 1.0,
+        "Adjacent Residential": 1.0,
+        "Downwind Exposure": 1.0,
+        "Hospital District": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9267,
+        "gini_coefficient": 0,
+        "total_cost": 25.47,
+        "avg_resilience": 0.6256,
+        "avg_severity": 5.1875,
+        "resource_utilization": 0.04,
+        "min_coverage_ratio": 0.8493,
+        "total_allocated": 4.0,
+        "total_available": 100,
+        "step": 5,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Adjacent Residential",
+          "Accident Site",
+          "Hospital District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2445,
+          "Government Agency": 0.1145,
+          "NGO": 0.103,
+          "AI Coordinator": 0.0612
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T22:56:49.165410",
+    "session_id": "20260412_225644",
+    "type": "event",
+    "data": {
+      "step": 5,
+      "event": {
+        "time_step": 5,
+        "type": "secondary_explosion",
+        "zone": "Accident Site",
+        "description": "Risk of secondary explosion",
+        "severity_change": 0.0,
+        "accessibility_change": -2.0
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T22:56:49.580034",
+    "session_id": "20260412_225644",
+    "type": "allocation",
+    "data": {
+      "step": 6,
+      "allocation": {
+        "Accident Site": 1.0,
+        "Adjacent Residential": 1.0,
+        "Downwind Exposure": 1.0,
+        "Hospital District": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9372,
+        "gini_coefficient": 0,
+        "total_cost": 25.42,
+        "avg_resilience": 0.6379,
+        "avg_severity": 5.0375,
+        "resource_utilization": 0.04,
+        "min_coverage_ratio": 0.8716,
+        "total_allocated": 4.0,
+        "total_available": 100,
+        "step": 6,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Adjacent Residential",
+          "Accident Site",
+          "Hospital District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2446,
+          "Government Agency": 0.1146,
+          "NGO": 0.1024,
+          "AI Coordinator": 0.0614
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T22:56:50.052812",
+    "session_id": "20260412_225644",
+    "type": "allocation",
+    "data": {
+      "step": 7,
+      "allocation": {
+        "Accident Site": 1.0,
+        "Adjacent Residential": 1.0,
+        "Downwind Exposure": 1.0,
+        "Hospital District": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9475,
+        "gini_coefficient": 0,
+        "total_cost": 25.37,
+        "avg_resilience": 0.6502,
+        "avg_severity": 4.8875,
+        "resource_utilization": 0.04,
+        "min_coverage_ratio": 0.8938,
+        "total_allocated": 4.0,
+        "total_available": 100,
+        "step": 7,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Adjacent Residential",
+          "Accident Site",
+          "Hospital District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2437,
+          "Government Agency": 0.1168,
+          "NGO": 0.1011,
+          "AI Coordinator": 0.0616
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T22:56:50.488835",
+    "session_id": "20260412_225644",
+    "type": "allocation",
+    "data": {
+      "step": 8,
+      "allocation": {
+        "Accident Site": 1.0,
+        "Adjacent Residential": 1.0,
+        "Downwind Exposure": 1.0,
+        "Hospital District": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9579,
+        "gini_coefficient": 0,
+        "total_cost": 25.32,
+        "avg_resilience": 0.6626,
+        "avg_severity": 4.7375,
+        "resource_utilization": 0.04,
+        "min_coverage_ratio": 0.9154,
+        "total_allocated": 4.0,
+        "total_available": 100,
+        "step": 8,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Adjacent Residential",
+          "Accident Site",
+          "Hospital District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2433,
+          "Government Agency": 0.118,
+          "NGO": 0.1002,
+          "AI Coordinator": 0.0617
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T22:56:50.928789",
+    "session_id": "20260412_225644",
+    "type": "allocation",
+    "data": {
+      "step": 9,
+      "allocation": {
+        "Accident Site": 1.0,
+        "Adjacent Residential": 1.0,
+        "Downwind Exposure": 1.0,
+        "Hospital District": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9682,
+        "gini_coefficient": 0,
+        "total_cost": 25.27,
+        "avg_resilience": 0.675,
+        "avg_severity": 4.5875,
+        "resource_utilization": 0.04,
+        "min_coverage_ratio": 0.9345,
+        "total_allocated": 4.0,
+        "total_available": 100,
+        "step": 9,
+        "phase": "Recovery"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Adjacent Residential",
+          "Accident Site",
+          "Hospital District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.254,
+          "Government Agency": 0.1091,
+          "NGO": 0.0996,
+          "AI Coordinator": 0.1031
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T22:56:51.364106",
+    "session_id": "20260412_225644",
+    "type": "allocation",
+    "data": {
+      "step": 10,
+      "allocation": {
+        "Accident Site": 1.0,
+        "Adjacent Residential": 1.0,
+        "Downwind Exposure": 1.0,
+        "Hospital District": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9785,
+        "gini_coefficient": 0,
+        "total_cost": 25.22,
+        "avg_resilience": 0.6873,
+        "avg_severity": 4.4375,
+        "resource_utilization": 0.04,
+        "min_coverage_ratio": 0.9535,
+        "total_allocated": 4.0,
+        "total_available": 100,
+        "step": 10,
+        "phase": "Recovery"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Adjacent Residential",
+          "Accident Site",
+          "Hospital District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2532,
+          "Government Agency": 0.112,
+          "NGO": 0.099,
+          "AI Coordinator": 0.1035
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T22:56:51.769194",
+    "session_id": "20260412_225644",
+    "type": "allocation",
+    "data": {
+      "step": 11,
+      "allocation": {
+        "Accident Site": 1.0,
+        "Adjacent Residential": 1.0,
+        "Downwind Exposure": 1.0,
+        "Hospital District": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9888,
+        "gini_coefficient": 0,
+        "total_cost": 25.17,
+        "avg_resilience": 0.6997,
+        "avg_severity": 4.2875,
+        "resource_utilization": 0.04,
+        "min_coverage_ratio": 0.9726,
+        "total_allocated": 4.0,
+        "total_available": 100,
+        "step": 11,
+        "phase": "Recovery"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Adjacent Residential",
+          "Accident Site",
+          "Hospital District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2607,
+          "Government Agency": 0.1082,
+          "NGO": 0.0953,
+          "AI Coordinator": 0.1012
+        }
+      }
+    }
+  }
+]

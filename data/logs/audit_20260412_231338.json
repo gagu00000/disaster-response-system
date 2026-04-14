@@ -1,0 +1,889 @@
+[
+  {
+    "timestamp": "2026-04-12T23:13:38.838496",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 0,
+      "allocation": {
+        "Riverside District": 53.77,
+        "Low-Lying Residential": 48.01,
+        "Agricultural Belt": 26.44,
+        "Highland Area": 12.91,
+        "Commercial District": 25.67,
+        "Evacuation Center": 13.21
+      },
+      "metrics": {
+        "response_coverage": 0.8372,
+        "gini_coefficient": 0.2865,
+        "total_cost": 465.47,
+        "avg_resilience": 0.5989,
+        "avg_severity": 4.5333,
+        "resource_utilization": 1.0,
+        "min_coverage_ratio": 0.6845,
+        "total_allocated": 180.01,
+        "total_available": 180,
+        "step": 0,
+        "phase": "Immediate Response"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.1766,
+          "Government Agency": 0.176,
+          "NGO": 0.0598,
+          "AI Coordinator": 0.0402
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:39.620975",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 1,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.8636,
+        "gini_coefficient": 0,
+        "total_cost": 12.52,
+        "avg_resilience": 0.613,
+        "avg_severity": 4.3833,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 0.7112,
+        "total_allocated": 6.0,
+        "total_available": 180,
+        "step": 1,
+        "phase": "Immediate Response"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.1939,
+          "Government Agency": 0.1722,
+          "NGO": 0.0333,
+          "AI Coordinator": 0.1083
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:40.308214",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 2,
+      "allocation": {
+        "Riverside District": 4.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.8973,
+        "gini_coefficient": 0.2778,
+        "total_cost": 33.52,
+        "avg_resilience": 0.6296,
+        "avg_severity": 4.2917,
+        "resource_utilization": 0.05,
+        "min_coverage_ratio": 0.7379,
+        "total_allocated": 9.0,
+        "total_available": 180,
+        "step": 2,
+        "phase": "Immediate Response"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.187,
+          "Government Agency": 0.1798,
+          "NGO": 0.0412,
+          "AI Coordinator": 0.114
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:40.308219",
+    "session_id": "20260412_231338",
+    "type": "event",
+    "data": {
+      "step": 2,
+      "event": {
+        "time_step": 2,
+        "type": "water_rise",
+        "zone": "Riverside District",
+        "description": "Water level rises 1.5m",
+        "severity_change": 0.5,
+        "accessibility_change": -1.0
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:41.049888",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 3,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 4.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9219,
+        "gini_coefficient": 0.2778,
+        "total_cost": 30.7,
+        "avg_resilience": 0.6467,
+        "avg_severity": 4.2,
+        "resource_utilization": 0.05,
+        "min_coverage_ratio": 0.7645,
+        "total_allocated": 9.0,
+        "total_available": 180,
+        "step": 3,
+        "phase": "Immediate Response"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.1962,
+          "Government Agency": 0.1756,
+          "NGO": 0.0191,
+          "AI Coordinator": 0.1056
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:41.049894",
+    "session_id": "20260412_231338",
+    "type": "event",
+    "data": {
+      "step": 3,
+      "event": {
+        "time_step": 3,
+        "type": "route_flooding",
+        "zone": "Low-Lying Residential",
+        "description": "Access routes flooded",
+        "severity_change": 0.5,
+        "accessibility_change": -2.0
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:41.817912",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 4,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 4.69,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9347,
+        "gini_coefficient": 0.3173,
+        "total_cost": 25.66,
+        "avg_resilience": 0.6679,
+        "avg_severity": 4.1867,
+        "resource_utilization": 0.0538,
+        "min_coverage_ratio": 0.7912,
+        "total_allocated": 9.69,
+        "total_available": 180,
+        "step": 4,
+        "phase": "Immediate Response"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.1976,
+          "Government Agency": 0.1789,
+          "NGO": 0.0289,
+          "AI Coordinator": 0.1074
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:41.817917",
+    "session_id": "20260412_231338",
+    "type": "event",
+    "data": {
+      "step": 4,
+      "event": {
+        "time_step": 4,
+        "type": "water_rise",
+        "zone": "Agricultural Belt",
+        "description": "Floodwaters reach agricultural belt",
+        "severity_change": 1.0,
+        "accessibility_change": -1.0
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:42.581078",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 5,
+      "allocation": {
+        "Riverside District": 10.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9586,
+        "gini_coefficient": 0.5,
+        "total_cost": 90.83,
+        "avg_resilience": 0.6898,
+        "avg_severity": 4.2117,
+        "resource_utilization": 0.0833,
+        "min_coverage_ratio": 0.8179,
+        "total_allocated": 15.0,
+        "total_available": 180,
+        "step": 5,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.1955,
+          "Government Agency": 0.1832,
+          "NGO": 0.0329,
+          "AI Coordinator": 0.0924
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:42.581086",
+    "session_id": "20260412_231338",
+    "type": "event",
+    "data": {
+      "step": 5,
+      "event": {
+        "time_step": 5,
+        "type": "dam_breach_warning",
+        "zone": "Riverside District",
+        "description": "Dam breach warning issued upstream",
+        "severity_change": 1.5,
+        "accessibility_change": -0.5
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:43.489823",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 6,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 5.94,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9877,
+        "gini_coefficient": 0.3763,
+        "total_cost": 30.46,
+        "avg_resilience": 0.7116,
+        "avg_severity": 4.1867,
+        "resource_utilization": 0.0608,
+        "min_coverage_ratio": 0.9502,
+        "total_allocated": 10.94,
+        "total_available": 180,
+        "step": 6,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.1949,
+          "Government Agency": 0.1867,
+          "NGO": 0.0308,
+          "AI Coordinator": 0.0923
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:43.489831",
+    "session_id": "20260412_231338",
+    "type": "event",
+    "data": {
+      "step": 6,
+      "event": {
+        "time_step": 6,
+        "type": "water_rise",
+        "zone": "Commercial District",
+        "description": "Flooding reaches commercial areas",
+        "severity_change": 1.0,
+        "accessibility_change": -1.5
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:44.263982",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 7,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9945,
+        "gini_coefficient": 0,
+        "total_cost": 18.53,
+        "avg_resilience": 0.7256,
+        "avg_severity": 4.0367,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 0.9668,
+        "total_allocated": 6.0,
+        "total_available": 180,
+        "step": 7,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.1948,
+          "Government Agency": 0.1863,
+          "NGO": 0.0306,
+          "AI Coordinator": 0.0923
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:44.995749",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 8,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9972,
+        "gini_coefficient": 0,
+        "total_cost": 18.11,
+        "avg_resilience": 0.7397,
+        "avg_severity": 3.8867,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 0.9835,
+        "total_allocated": 6.0,
+        "total_available": 180,
+        "step": 8,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.1957,
+          "Government Agency": 0.186,
+          "NGO": 0.0299,
+          "AI Coordinator": 0.0916
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:45.802878",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 9,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 1.0,
+        "gini_coefficient": 0,
+        "total_cost": 17.71,
+        "avg_resilience": 0.7538,
+        "avg_severity": 3.7367,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 1.0002,
+        "total_allocated": 6.0,
+        "total_available": 180,
+        "step": 9,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.1998,
+          "Government Agency": 0.1816,
+          "NGO": 0.0302,
+          "AI Coordinator": 0.0878
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:46.627670",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 10,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 1.0,
+        "gini_coefficient": 0,
+        "total_cost": 17.34,
+        "avg_resilience": 0.7679,
+        "avg_severity": 3.5867,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 1.0168,
+        "total_allocated": 6.0,
+        "total_available": 180,
+        "step": 10,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.199,
+          "Government Agency": 0.1822,
+          "NGO": 0.0307,
+          "AI Coordinator": 0.0881
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:47.405767",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 11,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 1.0,
+        "gini_coefficient": 0,
+        "total_cost": 16.99,
+        "avg_resilience": 0.781,
+        "avg_severity": 3.4367,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 1.0335,
+        "total_allocated": 6.0,
+        "total_available": 180,
+        "step": 11,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.1983,
+          "Government Agency": 0.1822,
+          "NGO": 0.0304,
+          "AI Coordinator": 0.0877
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:48.168747",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 12,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 1.0,
+        "gini_coefficient": 0,
+        "total_cost": 16.65,
+        "avg_resilience": 0.7902,
+        "avg_severity": 3.2867,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 1.0502,
+        "total_allocated": 6.0,
+        "total_available": 180,
+        "step": 12,
+        "phase": "Recovery"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2076,
+          "Government Agency": 0.1719,
+          "NGO": 0.0415,
+          "AI Coordinator": 0.1244
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:48.975462",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 13,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 1.0,
+        "gini_coefficient": 0,
+        "total_cost": 16.33,
+        "avg_resilience": 0.7994,
+        "avg_severity": 3.14,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 1.0668,
+        "total_allocated": 6.0,
+        "total_available": 180,
+        "step": 13,
+        "phase": "Recovery"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2077,
+          "Government Agency": 0.1705,
+          "NGO": 0.0419,
+          "AI Coordinator": 0.1227
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:49.706149",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 14,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 1.0,
+        "gini_coefficient": 0,
+        "total_cost": 16.02,
+        "avg_resilience": 0.8086,
+        "avg_severity": 2.9967,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 1.0835,
+        "total_allocated": 6.0,
+        "total_available": 180,
+        "step": 14,
+        "phase": "Recovery"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2083,
+          "Government Agency": 0.1683,
+          "NGO": 0.0387,
+          "AI Coordinator": 0.1218
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:50.466078",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 15,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 1.0,
+        "gini_coefficient": 0,
+        "total_cost": 15.73,
+        "avg_resilience": 0.8179,
+        "avg_severity": 2.8583,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 1.1002,
+        "total_allocated": 6.0,
+        "total_available": 180,
+        "step": 15,
+        "phase": "Recovery"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2033,
+          "Government Agency": 0.171,
+          "NGO": 0.0389,
+          "AI Coordinator": 0.1062
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:51.219912",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 16,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 1.0,
+        "gini_coefficient": 0,
+        "total_cost": 15.45,
+        "avg_resilience": 0.8271,
+        "avg_severity": 2.7367,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 1.1168,
+        "total_allocated": 6.0,
+        "total_available": 180,
+        "step": 16,
+        "phase": "Recovery"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2045,
+          "Government Agency": 0.1702,
+          "NGO": 0.0371,
+          "AI Coordinator": 0.1063
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-12T23:13:52.004966",
+    "session_id": "20260412_231338",
+    "type": "allocation",
+    "data": {
+      "step": 17,
+      "allocation": {
+        "Riverside District": 1.0,
+        "Low-Lying Residential": 1.0,
+        "Agricultural Belt": 1.0,
+        "Highland Area": 1.0,
+        "Commercial District": 1.0,
+        "Evacuation Center": 1.0
+      },
+      "metrics": {
+        "response_coverage": 1.0,
+        "gini_coefficient": 0,
+        "total_cost": 15.18,
+        "avg_resilience": 0.8363,
+        "avg_severity": 2.6183,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 1.1335,
+        "total_allocated": 6.0,
+        "total_available": 180,
+        "step": 17,
+        "phase": "Recovery"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Agricultural Belt",
+          "Low-Lying Residential",
+          "Evacuation Center",
+          "Highland Area",
+          "Commercial District",
+          "Riverside District"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2052,
+          "Government Agency": 0.1696,
+          "NGO": 0.0379,
+          "AI Coordinator": 0.1067
+        }
+      }
+    }
+  }
+]

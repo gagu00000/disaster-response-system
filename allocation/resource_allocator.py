@@ -59,6 +59,13 @@ class ResourceAllocator:
                 redistributed, zones, total_resources
             )
             fairness_after = self.fairness_monitor.check_fairness(final_allocation, zones)
+            # If constraints undid the fairness fix, fall back to the redistributed version
+            if not fairness_after["is_fair"] and fairness_after["gini_coefficient"] > fairness["gini_coefficient"]:
+                final_allocation = self.constraint_handler.apply_constraints(
+                    redistributed, zones, total_resources,
+                    min_share=0.04, max_share=0.40  # Relax constraints slightly
+                )
+                fairness_after = self.fairness_monitor.check_fairness(final_allocation, zones)
         else:
             final_allocation = constrained
             fairness_after = fairness

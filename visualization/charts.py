@@ -91,11 +91,17 @@ class Charts:
                 x=steps, y=vals, name=name, line=dict(color=color, width=2),
                 mode='lines+markers', marker=dict(size=5)
             ), row=r, col=c)
-        # Target lines
-        fig.add_hline(y=0.70, line_dash="dash", line_color=_ACCENT, opacity=0.3, row=1, col=1)
-        fig.add_hline(y=0.30, line_dash="dash", line_color=_DANGER, opacity=0.3, row=1, col=2)
-        fig.add_hline(y=0.60, line_dash="dash", line_color=_BLUE, opacity=0.3, row=2, col=1)
-        fig.update_layout(**_LAYOUT, height=480, showlegend=False)
+        # Target lines with annotations
+        fig.add_hline(y=0.70, line_dash="dash", line_color=_ACCENT, opacity=0.3, row=1, col=1,
+                      annotation_text="Target 70%", annotation_position="top left",
+                      annotation_font=dict(size=9, color=_DIM))
+        fig.add_hline(y=0.30, line_dash="dash", line_color=_DANGER, opacity=0.3, row=1, col=2,
+                      annotation_text="Target <0.30", annotation_position="top left",
+                      annotation_font=dict(size=9, color=_DIM))
+        fig.add_hline(y=0.60, line_dash="dash", line_color=_BLUE, opacity=0.3, row=2, col=1,
+                      annotation_text="Target 60%", annotation_position="top left",
+                      annotation_font=dict(size=9, color=_DIM))
+        fig.update_layout(**_LAYOUT, height=520, showlegend=False)
         return _style_axes(fig)
 
     @staticmethod
@@ -141,8 +147,9 @@ class Charts:
         matrix = [[h.get("allocations", {}).get(n, 0) for h in allocation_history] for n in zone_names]
         fig = go.Figure(go.Heatmap(
             z=matrix, x=[f"S{s}" for s in steps], y=zone_names,
-            colorscale=[[0, _BG], [0.5, _WARN], [1, _DANGER]],
+            colorscale=[[0, "#0a0a1a"], [0.2, "#1a1a4e"], [0.4, _BLUE], [0.6, _WARN], [0.8, "#ff5522"], [1, _DANGER]],
             text=[[f"{v:.0f}" for v in row] for row in matrix], texttemplate="%{text}",
+            textfont=dict(size=11),
             hovertemplate="Zone: %{y}<br>Step: %{x}<br>Alloc: %{z:.1f}<extra></extra>"
         ))
         fig.update_layout(**_LAYOUT, title="Allocation Heatmap", height=340)
@@ -172,4 +179,30 @@ class Charts:
         fig.update_layout(**_LAYOUT, title="AI Weight Evolution",
                           xaxis_title="Step", yaxis_title="Weight", height=340,
                           legend=dict(font=dict(size=10), bgcolor="rgba(0,0,0,0)"))
+        return _style_axes(fig)
+
+    @staticmethod
+    def baseline_comparison(system_alloc: dict, baselines: dict) -> go.Figure:
+        """Compare multi-agent allocation against baseline strategies."""
+        if not system_alloc or not baselines:
+            return go.Figure()
+        zones = list(system_alloc.keys())
+        colors = {"Multi-Agent (Ours)": _ACCENT, "Equal Split": _DIM, "Severity-Only": _WARN, "Single AI Agent": _PURPLE}
+        fig = go.Figure()
+        fig.add_trace(go.Bar(
+            name="Multi-Agent (Ours)", x=zones,
+            y=[system_alloc.get(z, 0) for z in zones],
+            marker_color=_ACCENT, opacity=0.95
+        ))
+        label_map = {"equal": "Equal Split", "severity": "Severity-Only", "single_agent": "Single AI Agent"}
+        for key, alloc in baselines.items():
+            label = label_map.get(key, key)
+            fig.add_trace(go.Bar(
+                name=label, x=zones,
+                y=[alloc.get(z, 0) for z in zones],
+                marker_color=colors.get(label, '#888'), opacity=0.7
+            ))
+        fig.update_layout(**_LAYOUT, barmode='group', title="Multi-Agent vs Baseline Strategies",
+                          height=400, legend=dict(font=dict(size=10), bgcolor="rgba(0,0,0,0)"),
+                          xaxis_title="Zone", yaxis_title="Resources Allocated")
         return _style_axes(fig)

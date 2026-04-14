@@ -24,6 +24,8 @@ class BaseAgent(ABC):
         self.current_priorities = None
         self.current_proposal = None
         self.evaluation_log = []
+        self._max_log_entries = 50  # Cap log size to prevent unbounded memory growth
+        self.concession_rate = 0.3  # Default; overridden by subclasses
 
     def evaluate_zones(self, zones: list, phase: str = None) -> dict:
         """
@@ -38,12 +40,14 @@ class BaseAgent(ABC):
             self.agent_type, zones, phase
         )
 
-        # Log evaluation
+        # Log evaluation (capped to prevent unbounded growth)
         self.evaluation_log.append({
             "phase": phase,
             "weights": self.weights.copy(),
             "priorities": self.current_priorities
         })
+        if len(self.evaluation_log) > self._max_log_entries:
+            self.evaluation_log = self.evaluation_log[-self._max_log_entries:]
 
         return self.current_priorities
 

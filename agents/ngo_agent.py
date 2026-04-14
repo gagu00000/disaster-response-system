@@ -17,6 +17,7 @@ class NGOAgent(BaseAgent):
 
     def __init__(self):
         super().__init__("NGO")
+        self.concession_rate = 0.20  # Firm on equity — advocates for vulnerable populations
 
     def _apply_behavioral_adjustments(self, proposal: dict, zones: list, total_resources: float) -> dict:
         """

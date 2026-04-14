@@ -17,6 +17,7 @@ class EmergencyAgent(BaseAgent):
 
     def __init__(self):
         super().__init__("Emergency Response")
+        self.concession_rate = 0.15  # Stubborn — life-saving mandate, concedes less
 
     def _apply_behavioral_adjustments(self, proposal: dict, zones: list, total_resources: float) -> dict:
         """

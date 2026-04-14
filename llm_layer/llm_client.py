@@ -119,6 +119,39 @@ class LLMClient:
             latency = time.time() - start
             return {"text": "", "latency": latency, "success": False, "error": str(e)}
 
+    def chat(self, messages: list, max_tokens: int = 600, temperature: float = None) -> str:
+        """
+        Multi-turn chat with full conversation history.
+
+        Args:
+            messages: list of {"role": "system"|"user"|"assistant", "content": str}
+            max_tokens: maximum response length
+            temperature: sampling temperature
+
+        Returns:
+            Assistant response text
+        """
+        if not OLLAMA_AVAILABLE or not self.is_connected:
+            raise ConnectionError("LLM not available")
+
+        temp = temperature or self.DEFAULT_TEMPERATURE
+        try:
+            response = ollama.chat(
+                model=self.model,
+                messages=messages,
+                options={
+                    "temperature": temp,
+                    "num_predict": max_tokens,
+                }
+            )
+            if hasattr(response, 'message'):
+                msg = response.message
+                return getattr(msg, 'content', '') or ''
+            else:
+                return response.get("message", {}).get("content", "")
+        except Exception as e:
+            raise ConnectionError(f"LLM chat failed: {str(e)}")
+
     def warm_up(self):
         """Pre-warm the model by sending a simple test prompt."""
         try:

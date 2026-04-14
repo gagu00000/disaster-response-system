@@ -1,0 +1,705 @@
+[
+  {
+    "timestamp": "2026-04-13T00:25:56.278421",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 0,
+      "allocation": {
+        "Urban Center": 43.46,
+        "Suburban Ring": 25.29,
+        "Industrial Zone": 38.31,
+        "Rural Outskirts": 20.07,
+        "Coastal Settlement": 22.86
+      },
+      "metrics": {
+        "response_coverage": 0.743,
+        "gini_coefficient": 0.166,
+        "total_cost": 349.46,
+        "avg_resilience": 0.5616,
+        "avg_severity": 5.44,
+        "resource_utilization": 0.9999,
+        "min_coverage_ratio": 0.4817,
+        "total_allocated": 149.99,
+        "total_available": 150,
+        "step": 0,
+        "phase": "Immediate Response"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Suburban Ring",
+          "Coastal Settlement",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.236,
+          "Government Agency": 0.1105,
+          "NGO": 0.1709,
+          "AI Coordinator": 0.0311
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:25:56.835948",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 1,
+      "allocation": {
+        "Urban Center": 4.06,
+        "Suburban Ring": 2.02,
+        "Industrial Zone": 1.0,
+        "Rural Outskirts": 1.0,
+        "Coastal Settlement": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.7771,
+        "gini_coefficient": 0.3145,
+        "total_cost": 22.52,
+        "avg_resilience": 0.5754,
+        "avg_severity": 5.35,
+        "resource_utilization": 0.0605,
+        "min_coverage_ratio": 0.5202,
+        "total_allocated": 9.08,
+        "total_available": 150,
+        "step": 1,
+        "phase": "Immediate Response"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Urban Center",
+          "Suburban Ring",
+          "Coastal Settlement",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2148,
+          "Government Agency": 0.124,
+          "NGO": 0.0641,
+          "AI Coordinator": 0.0833
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:25:56.835951",
+    "session_id": "20260413_002555",
+    "type": "event",
+    "data": {
+      "step": 1,
+      "event": {
+        "time_step": 1,
+        "type": "hospital_reduction",
+        "zone": "Urban Center",
+        "description": "Hospital capacity reduced by 30%",
+        "severity_change": 0.5,
+        "accessibility_change": 0.0
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:25:57.359003",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 2,
+      "allocation": {
+        "Urban Center": 5.02,
+        "Suburban Ring": 2.51,
+        "Industrial Zone": 1.0,
+        "Rural Outskirts": 1.0,
+        "Coastal Settlement": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.8156,
+        "gini_coefficient": 0.3628,
+        "total_cost": 28.12,
+        "avg_resilience": 0.5907,
+        "avg_severity": 5.146,
+        "resource_utilization": 0.0702,
+        "min_coverage_ratio": 0.568,
+        "total_allocated": 10.53,
+        "total_available": 150,
+        "step": 2,
+        "phase": "Immediate Response"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Urban Center",
+          "Suburban Ring",
+          "Coastal Settlement",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2117,
+          "Government Agency": 0.1232,
+          "NGO": 0.0643,
+          "AI Coordinator": 0.0851
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:25:57.359007",
+    "session_id": "20260413_002555",
+    "type": "event",
+    "data": {
+      "step": 2,
+      "event": {
+        "time_step": 2,
+        "type": "road_closure",
+        "zone": "Suburban Ring",
+        "description": "Major road closure due to debris",
+        "severity_change": 0.0,
+        "accessibility_change": -2.0
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:25:57.881356",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 3,
+      "allocation": {
+        "Urban Center": 5.6,
+        "Suburban Ring": 2.75,
+        "Industrial Zone": 1.0,
+        "Rural Outskirts": 1.0,
+        "Coastal Settlement": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.8515,
+        "gini_coefficient": 0.3859,
+        "total_cost": 38.42,
+        "avg_resilience": 0.6069,
+        "avg_severity": 5.132,
+        "resource_utilization": 0.0757,
+        "min_coverage_ratio": 0.6204,
+        "total_allocated": 11.35,
+        "total_available": 150,
+        "step": 3,
+        "phase": "Immediate Response"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Urban Center",
+          "Suburban Ring",
+          "Coastal Settlement",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2134,
+          "Government Agency": 0.1244,
+          "NGO": 0.061,
+          "AI Coordinator": 0.0866
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:25:57.881360",
+    "session_id": "20260413_002555",
+    "type": "event",
+    "data": {
+      "step": 3,
+      "event": {
+        "time_step": 3,
+        "type": "aftershock",
+        "zone": "Urban Center",
+        "description": "Aftershock increases severity",
+        "severity_change": 1.0,
+        "accessibility_change": -1.0
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:25:58.398155",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 4,
+      "allocation": {
+        "Urban Center": 1.0,
+        "Suburban Ring": 2.89,
+        "Industrial Zone": 1.0,
+        "Rural Outskirts": 1.0,
+        "Coastal Settlement": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.8719,
+        "gini_coefficient": 0.2194,
+        "total_cost": 17.12,
+        "avg_resilience": 0.619,
+        "avg_severity": 4.964,
+        "resource_utilization": 0.0459,
+        "min_coverage_ratio": 0.6754,
+        "total_allocated": 6.89,
+        "total_available": 150,
+        "step": 4,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Urban Center",
+          "Suburban Ring",
+          "Coastal Settlement",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2076,
+          "Government Agency": 0.1279,
+          "NGO": 0.0657,
+          "AI Coordinator": 0.0751
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:25:58.953782",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 5,
+      "allocation": {
+        "Urban Center": 1.0,
+        "Suburban Ring": 3.77,
+        "Industrial Zone": 1.0,
+        "Rural Outskirts": 1.0,
+        "Coastal Settlement": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.8956,
+        "gini_coefficient": 0.2852,
+        "total_cost": 18.95,
+        "avg_resilience": 0.6323,
+        "avg_severity": 4.786,
+        "resource_utilization": 0.0518,
+        "min_coverage_ratio": 0.7472,
+        "total_allocated": 7.77,
+        "total_available": 150,
+        "step": 5,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Urban Center",
+          "Suburban Ring",
+          "Coastal Settlement",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2063,
+          "Government Agency": 0.1286,
+          "NGO": 0.0637,
+          "AI Coordinator": 0.0758
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:25:59.463131",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 6,
+      "allocation": {
+        "Urban Center": 1.0,
+        "Suburban Ring": 1.0,
+        "Industrial Zone": 1.0,
+        "Rural Outskirts": 1.0,
+        "Coastal Settlement": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9087,
+        "gini_coefficient": 0,
+        "total_cost": 12.26,
+        "avg_resilience": 0.6419,
+        "avg_severity": 4.636,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 0.7663,
+        "total_allocated": 5.0,
+        "total_available": 150,
+        "step": 6,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Urban Center",
+          "Suburban Ring",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.208,
+          "Government Agency": 0.1259,
+          "NGO": 0.061,
+          "AI Coordinator": 0.0746
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:26:00.017763",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 7,
+      "allocation": {
+        "Urban Center": 1.0,
+        "Suburban Ring": 1.0,
+        "Industrial Zone": 8.16,
+        "Rural Outskirts": 1.0,
+        "Coastal Settlement": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9218,
+        "gini_coefficient": 0.4711,
+        "total_cost": 27.04,
+        "avg_resilience": 0.6648,
+        "avg_severity": 4.714,
+        "resource_utilization": 0.0811,
+        "min_coverage_ratio": 0.7853,
+        "total_allocated": 12.16,
+        "total_available": 150,
+        "step": 7,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Suburban Ring",
+          "Coastal Settlement",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2192,
+          "Government Agency": 0.1019,
+          "NGO": 0.1198,
+          "AI Coordinator": 0.0644
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:26:00.017769",
+    "session_id": "20260413_002555",
+    "type": "event",
+    "data": {
+      "step": 7,
+      "event": {
+        "time_step": 7,
+        "type": "aftershock",
+        "zone": "Industrial Zone",
+        "description": "Secondary aftershock hits industrial area",
+        "severity_change": 1.5,
+        "accessibility_change": -0.5
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:26:00.562169",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 8,
+      "allocation": {
+        "Urban Center": 1.0,
+        "Suburban Ring": 1.0,
+        "Industrial Zone": 1.0,
+        "Rural Outskirts": 1.0,
+        "Coastal Settlement": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9292,
+        "gini_coefficient": 0,
+        "total_cost": 12.1,
+        "avg_resilience": 0.6744,
+        "avg_severity": 4.564,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 0.8044,
+        "total_allocated": 5.0,
+        "total_available": 150,
+        "step": 8,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Urban Center",
+          "Suburban Ring",
+          "Coastal Settlement",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2085,
+          "Government Agency": 0.1233,
+          "NGO": 0.0653,
+          "AI Coordinator": 0.0737
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:26:01.069645",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 9,
+      "allocation": {
+        "Urban Center": 1.0,
+        "Suburban Ring": 1.0,
+        "Industrial Zone": 1.0,
+        "Rural Outskirts": 1.0,
+        "Coastal Settlement": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9357,
+        "gini_coefficient": 0,
+        "total_cost": 11.94,
+        "avg_resilience": 0.684,
+        "avg_severity": 4.414,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 0.8234,
+        "total_allocated": 5.0,
+        "total_available": 150,
+        "step": 9,
+        "phase": "Stabilization"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Urban Center",
+          "Suburban Ring",
+          "Coastal Settlement",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.209,
+          "Government Agency": 0.1218,
+          "NGO": 0.0681,
+          "AI Coordinator": 0.0736
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:26:01.536761",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 10,
+      "allocation": {
+        "Urban Center": 1.0,
+        "Suburban Ring": 1.0,
+        "Industrial Zone": 1.0,
+        "Rural Outskirts": 1.0,
+        "Coastal Settlement": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9422,
+        "gini_coefficient": 0,
+        "total_cost": 11.78,
+        "avg_resilience": 0.6936,
+        "avg_severity": 4.264,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 0.8425,
+        "total_allocated": 5.0,
+        "total_available": 150,
+        "step": 10,
+        "phase": "Recovery"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Urban Center",
+          "Suburban Ring",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2353,
+          "Government Agency": 0.1221,
+          "NGO": 0.0711,
+          "AI Coordinator": 0.0923
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:26:02.058428",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 11,
+      "allocation": {
+        "Urban Center": 1.0,
+        "Suburban Ring": 1.0,
+        "Industrial Zone": 1.0,
+        "Rural Outskirts": 1.0,
+        "Coastal Settlement": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9487,
+        "gini_coefficient": 0,
+        "total_cost": 11.62,
+        "avg_resilience": 0.7031,
+        "avg_severity": 4.114,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 0.8615,
+        "total_allocated": 5.0,
+        "total_available": 150,
+        "step": 11,
+        "phase": "Recovery"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Urban Center",
+          "Suburban Ring",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2412,
+          "Government Agency": 0.1169,
+          "NGO": 0.0688,
+          "AI Coordinator": 0.0878
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:26:02.540845",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 12,
+      "allocation": {
+        "Urban Center": 1.0,
+        "Suburban Ring": 1.0,
+        "Industrial Zone": 1.0,
+        "Rural Outskirts": 1.0,
+        "Coastal Settlement": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9552,
+        "gini_coefficient": 0,
+        "total_cost": 11.47,
+        "avg_resilience": 0.7127,
+        "avg_severity": 3.964,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 0.8806,
+        "total_allocated": 5.0,
+        "total_available": 150,
+        "step": 12,
+        "phase": "Recovery"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Urban Center",
+          "Suburban Ring",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2368,
+          "Government Agency": 0.1238,
+          "NGO": 0.0751,
+          "AI Coordinator": 0.0758
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:26:03.012147",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 13,
+      "allocation": {
+        "Urban Center": 1.0,
+        "Suburban Ring": 1.0,
+        "Industrial Zone": 1.0,
+        "Rural Outskirts": 1.0,
+        "Coastal Settlement": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9616,
+        "gini_coefficient": 0,
+        "total_cost": 11.32,
+        "avg_resilience": 0.7223,
+        "avg_severity": 3.814,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 0.8996,
+        "total_allocated": 5.0,
+        "total_available": 150,
+        "step": 13,
+        "phase": "Recovery"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Urban Center",
+          "Suburban Ring",
+          "Coastal Settlement",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2322,
+          "Government Agency": 0.1297,
+          "NGO": 0.0711,
+          "AI Coordinator": 0.0777
+        }
+      }
+    }
+  },
+  {
+    "timestamp": "2026-04-13T00:26:03.478077",
+    "session_id": "20260413_002555",
+    "type": "allocation",
+    "data": {
+      "step": 14,
+      "allocation": {
+        "Urban Center": 1.0,
+        "Suburban Ring": 1.0,
+        "Industrial Zone": 1.0,
+        "Rural Outskirts": 1.0,
+        "Coastal Settlement": 1.0
+      },
+      "metrics": {
+        "response_coverage": 0.9681,
+        "gini_coefficient": 0,
+        "total_cost": 11.18,
+        "avg_resilience": 0.7319,
+        "avg_severity": 3.664,
+        "resource_utilization": 0.0333,
+        "min_coverage_ratio": 0.9187,
+        "total_allocated": 5.0,
+        "total_available": 150,
+        "step": 14,
+        "phase": "Recovery"
+      },
+      "negotiation_summary": {
+        "contested_zones": [
+          "Industrial Zone",
+          "Urban Center",
+          "Suburban Ring",
+          "Coastal Settlement",
+          "Rural Outskirts"
+        ],
+        "dissent_scores": {
+          "Emergency Response": 0.2329,
+          "Government Agency": 0.1296,
+          "NGO": 0.0719,
+          "AI Coordinator": 0.0778
+        }
+      }
+    }
+  }
+]

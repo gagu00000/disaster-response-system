@@ -18,6 +18,7 @@ class AICoordinatorAgent(BaseAgent):
 
     def __init__(self):
         super().__init__("AI Coordinator")
+        self.concession_rate = 0.40  # Flexible mediator — willing to compromise for consensus
 
     def _apply_behavioral_adjustments(self, proposal: dict, zones: list, total_resources: float) -> dict:
         """

@@ -21,17 +21,19 @@ def test_negotiation_produces_allocation():
             "population": z["population"],
             "population_at_risk": z["population"],
             "accessibility": z["accessibility"],
+            "resource_availability": z.get("resource_availability", 3.0),
+            "vulnerability": z.get("vulnerability", 0.5),
             "unmet_demand": z.get("initial_demand", 20),
             "cumulative_resources_received": 0,
             "resilience_index": 0.5
         })
 
     engine = NegotiationEngine()
-    result = engine.negotiate(zone_states, 100, "Immediate Response")
+    result = engine.run_negotiation(zone_states, 100, "Immediate Response")
 
-    assert "final_allocation" in result, "Should produce final_allocation"
-    assert len(result["final_allocation"]) == len(zones), "Should allocate to all zones"
-    assert sum(result["final_allocation"].values()) <= 100 + 0.01, "Should not exceed budget"
+    assert "consensus_allocation" in result, "Should produce consensus_allocation"
+    assert len(result["consensus_allocation"]) == len(zones), "Should allocate to all zones"
+    assert sum(result["consensus_allocation"].values()) <= 100 + 0.01, "Should not exceed budget"
     print("  ✅ test_negotiation_produces_allocation PASSED")
 
 
@@ -42,12 +44,15 @@ def test_negotiation_proposals_exist():
     zone_states = [{
         "name": z["name"], "current_severity": z["severity"],
         "population": z["population"], "population_at_risk": z["population"],
-        "accessibility": z["accessibility"], "unmet_demand": z.get("initial_demand", 20),
+        "accessibility": z["accessibility"],
+        "resource_availability": z.get("resource_availability", 3.0),
+        "vulnerability": z.get("vulnerability", 0.5),
+        "unmet_demand": z.get("initial_demand", 20),
         "cumulative_resources_received": 0, "resilience_index": 0.5
     } for z in zones]
 
     engine = NegotiationEngine()
-    result = engine.negotiate(zone_states, 150, "Stabilization")
+    result = engine.run_negotiation(zone_states, 150, "Stabilization")
 
     proposals = result.get("proposals", {})
     assert len(proposals) == 4, f"Should have 4 agent proposals, got {len(proposals)}"
@@ -63,12 +68,15 @@ def test_negotiation_has_dissent_scores():
     zone_states = [{
         "name": z["name"], "current_severity": z["severity"],
         "population": z["population"], "population_at_risk": z["population"],
-        "accessibility": z["accessibility"], "unmet_demand": z.get("initial_demand", 20),
+        "accessibility": z["accessibility"],
+        "resource_availability": z.get("resource_availability", 3.0),
+        "vulnerability": z.get("vulnerability", 0.5),
+        "unmet_demand": z.get("initial_demand", 20),
         "cumulative_resources_received": 0, "resilience_index": 0.5
     } for z in zones]
 
     engine = NegotiationEngine()
-    result = engine.negotiate(zone_states, 80, "Immediate Response")
+    result = engine.run_negotiation(zone_states, 80, "Immediate Response")
 
     dissent = result.get("dissent_scores", {})
     assert len(dissent) > 0, "Should have dissent scores"
@@ -84,12 +92,15 @@ def test_negotiation_divergence_analysis():
     zone_states = [{
         "name": z["name"], "current_severity": z["severity"],
         "population": z["population"], "population_at_risk": z["population"],
-        "accessibility": z["accessibility"], "unmet_demand": z.get("initial_demand", 20),
+        "accessibility": z["accessibility"],
+        "resource_availability": z.get("resource_availability", 3.0),
+        "vulnerability": z.get("vulnerability", 0.5),
+        "unmet_demand": z.get("initial_demand", 20),
         "cumulative_resources_received": 0, "resilience_index": 0.5
     } for z in zones]
 
     engine = NegotiationEngine()
-    result = engine.negotiate(zone_states, 100, "Immediate Response")
+    result = engine.run_negotiation(zone_states, 100, "Immediate Response")
 
     divergence = result.get("divergence", {})
     assert "contested_zones" in divergence, "Should identify contested zones"

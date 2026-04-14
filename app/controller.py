@@ -30,6 +30,7 @@ class Controller:
         self.audit_trail = AuditTrail()
         self.llm_available = False
         self.llm_client = None
+        self.chatbot = None
 
         # State
         self.current_scenario_id = None
@@ -64,9 +65,13 @@ class Controller:
             from llm_layer.llm_client import LLMClient
             self.llm_client = LLMClient()
             self.llm_available = self.llm_client.test_connection()
+            if self.llm_available:
+                from llm_layer.chatbot_engine import ChatbotEngine
+                self.chatbot = ChatbotEngine(self.llm_client)
         except Exception:
             self.llm_available = False
             self.llm_client = None
+            self.chatbot = None
 
     def run_step(self) -> dict:
         """Execute one complete simulation step."""
@@ -140,6 +145,13 @@ class Controller:
         # Advance simulation
         self.sim_engine.advance_step()
 
+        # Persist audit trail when simulation completes
+        if self.sim_engine.is_complete:
+            try:
+                self.audit_trail.save_to_file()
+            except Exception:
+                pass
+
         return step_result
 
     def run_all_steps(self) -> list:
@@ -148,6 +160,11 @@ class Controller:
         while not self.sim_engine.is_complete:
             result = self.run_step()
             results.append(result)
+        # Persist audit trail to file at simulation end
+        try:
+            self.audit_trail.save_to_file()
+        except Exception:
+            pass
         return results
 
     def get_current_state(self) -> dict:
@@ -165,6 +182,17 @@ class Controller:
         summary = self.sim_engine.get_simulation_summary()
         summary["ai_weight_history"] = self.ai_weight_history
         summary["template_summary"] = self.narrator.narrate_summary(summary)
+        # Compute baseline comparisons for final step
+        if self.step_results:
+            last = self.step_results[-1]
+            zones = last.get("post_state", [])
+            total_res = last.get("allocation_result", {}).get("total_available", 0)
+            phase = last.get("phase", None)
+            summary["baselines"] = {
+                "equal": self.allocator.get_baseline_equal(zones, total_res),
+                "severity": self.allocator.get_baseline_severity(zones, total_res),
+                "single_agent": self.allocator.get_baseline_single_agent(zones, total_res, phase),
+            }
         return summary
 
     def get_scenario_narration(self, scenario_id: str = None) -> str:
@@ -220,6 +248,24 @@ class Controller:
             except Exception:
                 pass
         return summary.get("template_summary", "Simulation summary unavailable.")
+
+    def chat(self, question: str) -> str:
+        """Send a message to the chatbot and return the response."""
+        if not self.chatbot:
+            return "Chatbot not available. Please check that Ollama is running."
+        summary = self.get_simulation_summary() if self.is_initialized else {}
+        return self.chatbot.ask(question, summary)
+
+    def get_chat_history(self) -> list:
+        """Return chatbot conversation history."""
+        if self.chatbot:
+            return self.chatbot.get_history()
+        return []
+
+    def clear_chat_history(self):
+        """Clear chatbot conversation history."""
+        if self.chatbot:
+            self.chatbot.clear_history()
 
     @staticmethod
     def get_available_scenarios() -> list:

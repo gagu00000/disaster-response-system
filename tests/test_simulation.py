@@ -79,7 +79,6 @@ def test_environment_zone_states():
     """Environment should track zone states correctly."""
     scenario = get_scenario("earthquake")
     env = DisasterEnvironment(scenario)
-    env.initialize()
 
     zones = env.get_all_zone_states()
     assert len(zones) == 5
@@ -94,7 +93,7 @@ def test_environment_zone_states():
 def test_dynamic_events():
     """Event system should fire events at scheduled steps."""
     scenario = get_scenario("earthquake")
-    event_system = EventSystem(scenario.get("dynamic_events", []))
+    event_system = EventSystem(scenario)
     events = event_system.get_events_for_step(3)
     # Earthquake scenario has aftershock at step 3
     print(f"  ✅ test_dynamic_events PASSED ({len(events)} events at step 3)")
@@ -103,11 +102,15 @@ def test_dynamic_events():
 def test_impact_calculator():
     """Impact calculator should compute valid metrics."""
     zones = [
-        {"name": "A", "current_severity": 5, "population": 1000, "unmet_demand": 5, "resilience_index": 0.6},
-        {"name": "B", "current_severity": 3, "population": 2000, "unmet_demand": 3, "resilience_index": 0.7},
+        {"name": "A", "current_severity": 5, "population": 1000, "unmet_demand": 5,
+         "resilience_index": 0.6, "initial_demand": 20, "cumulative_resources_received": 10,
+         "accessibility": 5.0},
+        {"name": "B", "current_severity": 3, "population": 2000, "unmet_demand": 3,
+         "resilience_index": 0.7, "initial_demand": 15, "cumulative_resources_received": 8,
+         "accessibility": 7.0},
     ]
     alloc = {"A": 15, "B": 10}
-    metrics = ImpactCalculator.compute_metrics(zones, alloc, 50)
+    metrics = ImpactCalculator.compute_all_metrics(zones, alloc, 50)
     assert "gini_coefficient" in metrics
     assert "response_coverage" in metrics
     assert "avg_resilience" in metrics

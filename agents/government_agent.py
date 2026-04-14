@@ -17,6 +17,7 @@ class GovernmentAgent(BaseAgent):
 
     def __init__(self):
         super().__init__("Government Agency")
+        self.concession_rate = 0.30  # Moderate — balances policy with cooperation
 
     def _apply_behavioral_adjustments(self, proposal: dict, zones: list, total_resources: float) -> dict:
         """
